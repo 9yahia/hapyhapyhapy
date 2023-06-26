@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Happy Birthday</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden_dev.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments"></span><br />
+				<span class="space"/><span class="comments">وووووووه عيد ميلادو الورع الصغنون جااااا</span><br />
+				<span class="space"/><span class="comments">كل عام والصنوره الصغنونه بخيررر</span><br />
+				<span class="space"/><span class="comments">اوف الحين صار 21 ياساتر</span><br />
+				<span class="comments">يحبو وييييييييجد اكثر منوووووووو واستو صار عمرهها  21 ياساتر ويجد</span><br />
+				<span class="string">"Happy Birthday"</span>
+				<span class="space"/><span class="string">by yahia</span><br />
+				<span class="space"/><a href="https://discord.gg/GKrCnqPcxS">اضغط هنا عشان يفتحلك رابط</a><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+						    ما قدرت اجيبلو ورده بس هاذي كيكة من وردات بجيبلو ورده بعدن
+				
+					</div>
+					</br>
+					</br>
+					<div id="loveu">
+						"this cake made by bebo , bobe and ye7e for 9norh”<br/>
+						<div class="signature">adorable 93'non</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(1908,4, 08);
+		together.setHours(8);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
